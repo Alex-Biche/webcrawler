@@ -1,0 +1,35 @@
+# Nautalis Web Crawler Configuration
+# High-performance settings for search engine crawling
+
+# Crawling Behavior
+max_depth: 3                    # Maximum link depth to follow
+max_pages: 1000                 # Maximum pages to crawl (0 = unlimited)
+max_workers: 10                 # Concurrent worker threads
+stay_in_domain: true            # Restrict crawling to seed domains
+delay: 0.5                      # Delay between requests (seconds)
+timeout: 30                     # Request timeout (seconds)
+
+# Database Configuration
+database_type: sqlite           # 'sqlite' or 'postgresql'
+database_url: nautalis.db       # SQLite file or PostgreSQL connection string
+                               # PostgreSQL example: postgresql://user:pass@localhost:5432/nautalis
+
+# Retry and Error Handling
+max_retries: 3                  # Maximum retry attempts for failed requests
+retry_delay: 1.0               # Delay between retries (seconds)
+
+# User Agent and Headers
+user_agent: "NautalisBot/1.0 (+https://nautalis.search)"
+
+# Logging Configuration
+log_level: INFO                 # DEBUG, INFO, WARNING, ERROR
+log_file: null                  # Path to log file (null = console only)
+
+# Example PostgreSQL configuration:
+# database_type: postgresql
+# database_url: postgresql://nautalis:password@localhost:5432/nautalis_db
+
+# Example high-performance settings:
+# max_workers: 50
+# delay: 0.1
+# max_pages: 10000
