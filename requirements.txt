@@ -1,0 +1,21 @@
+# Nautalis Web Crawler Dependencies
+# Core async HTTP and web scraping
+aiohttp>=3.9.0
+aiosqlite>=0.19.0
+asyncpg>=0.29.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Configuration and CLI
+PyYAML>=6.0
+argparse>=1.4.0
+
+# Optional performance enhancements
+uvloop>=0.19.0; sys_platform != "win32"
+cchardet>=2.1.7
+
+# Development and testing (optional)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
